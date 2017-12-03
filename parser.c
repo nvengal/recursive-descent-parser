@@ -141,10 +141,10 @@ int expr(int runningTotal) {
   int total = term(runningTotal);
   if (match(PLUS)) {
     getToken(getchar());
-    return total + term(runningTotal);
+    return total + term(0);
   } else if (match(MINUS)) {
     getToken(getchar());
-    return total - term(runningTotal);
+    return total - term(0);
   }
   return total;
 }
